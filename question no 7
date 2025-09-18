@@ -1,0 +1,58 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int binarySearch(string names[],int size,string target)
+{
+    int steps=0;
+    int left=0;
+    int right=size-1;
+
+    while(left<=right)
+    {
+        steps++;
+        int mid=left+(right-left)/2;
+
+        if(names[mid]==target)return steps;
+
+        else if(names[mid]<target)left=mid+1;
+        else right=mid-1;
+    }
+    return -1;
+}
+
+int main() {
+
+    string names[]={"Ahmed","Ali","Basit","Kareem","Rizwan","Sarwar","Tariq","Taufiq","Yasin","Zulfiqar"};
+   string name;
+   
+   while(name!="out")
+
+   {
+  
+    cout<<"Enter name to find,or 'out' to exit "<<endl;
+    cin>>name;
+      if(name=="out")
+    {
+        cout<<"Exitting..";
+        return 0;
+    }
+    for(int i=0;i<10;i++)
+    {
+        if(names[i]==name)
+        {
+            
+            cout<<name<<" found,Steps Taken through linear search : " <<i+1<<endl;
+            break;
+        }
+        if(i==9)cout<<name<<" not found"<<endl;
+        
+    }
+    int qadam=binarySearch(names,10,name);
+    if(qadam!=-1)
+        cout<<name<<" found,Steps Taken through binary search : " <<qadam<<endl;
+     else cout<<name<<" not found "<<endl;
+   
+}
+
+}
