@@ -1,0 +1,12 @@
+. In each part, let 𝑇𝐴 ∶𝑅2 →𝑅2 be multiplication by 𝐴, and
+let u1 = (1, 2) and u2 = (−1, 1). Determine whether the set
+{𝑇𝐴(u1
+), 𝑇𝐴(u2
+)} is linearly independent in 𝑅
+2
+.
+a. 𝐴 = [
+1 −1
+0 2] b. 𝐴 = [
+1 −1
+−2 2]
